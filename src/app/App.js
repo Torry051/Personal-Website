@@ -11,13 +11,16 @@ import { Home } from "../pages/Home";
 const Resume = lazy(() => import("../pages/Resume"));
 const PageNotFound = lazy(() => import("../pages/PageNotFound"));
 
+// Use basename for GitHub Pages deployment
+const basename = process.env.PUBLIC_URL || "";
+
 export const App = () => {
     logCredits();
 
     return (
         <ThemeProvider>
             <CssBaseline />
-            <Router>
+            <Router basename={basename}>
                 <HelmetMeta />
                 <Switch>
                     <Route path="/" exact component={Home} />
