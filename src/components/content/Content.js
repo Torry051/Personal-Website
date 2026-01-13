@@ -13,6 +13,16 @@ const useStyles = makeStyles((theme) => ({
             marginLeft: theme.spacing(4),
         },
     },
+    ucsb: {
+        background: `linear-gradient(90deg, ${theme.palette.primary.main} 0%, #00e5e5 50%, ${theme.palette.secondary.main} 100%)`,
+        WebkitBackgroundClip: 'text',
+        WebkitTextFillColor: 'transparent',
+        backgroundClip: 'text',
+        fontWeight: 700,
+        fontSize: '1.3em',
+        letterSpacing: '0.02em',
+        display: 'inline',
+    },
 }));
 
 export const Content = () => {
@@ -25,7 +35,9 @@ export const Content = () => {
             </Typography>
             <Typography variant="h5" component="h2" gutterBottom>
                 <TextDecrypt text={`a ${Resume.basics.job}`} />
-                <TextDecrypt text={`from ${Resume.basics.location.country}`} />
+                <p>
+                    at <span className={classes.ucsb}>UCSB</span>
+                </p>
             </Typography>
         </Container>
     );

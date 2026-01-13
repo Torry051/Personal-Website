@@ -6,14 +6,22 @@ import { Logo } from "./Logo";
 
 const useStyles = makeStyles((theme) => ({
     svg: {
-        width: "40px",
-        height: "40px",
+        width: "44px",
+        height: "44px",
         position: "absolute",
         top: theme.spacing(6),
         left: theme.spacing(6),
         boxShadow:
             "0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12)",
         borderRadius: "50%",
+        border: `2px solid ${theme.palette.primary.main}`,
+        padding: "2px",
+        background: theme.palette.type === 'dark' ? '#111' : '#fff',
+        transition: "all 0.3s ease",
+        "&:hover": {
+            borderColor: theme.palette.secondary.main,
+            boxShadow: `0 0 15px ${theme.palette.primary.main}`,
+        },
     },
 }));
 

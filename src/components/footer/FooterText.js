@@ -6,16 +6,14 @@ import { HeartIcon } from '../content/SponsorButton';
 
 const useStyles = makeStyles((theme) => ({
   footerText: {
-    position: 'absolute',
-    bottom: theme.spacing(6),
-    left: theme.spacing(6),
+    display: 'inline-flex',
+    alignItems: 'center',
+    flexWrap: 'wrap',
+    padding: theme.spacing(2),
     '&:hover': {
       color: theme.palette.primary.main,
     },
     transition: 'all 0.5s ease',
-    display: 'flex',
-    alignItems: 'center',
-    flexWrap: 'wrap',
   },
 }));
 
